@@ -7,11 +7,11 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/etInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="343dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="343dp"
         android:ems="10"
@@ -20,52 +20,130 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvHint"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="361dp"
         android:layout_height="55dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="94dp"
+        android:layout_marginTop="42dp"
         android:layout_marginEnd="25dp"
         android:text="Try to guess the number I'm thinking of from 1-1000!"
         android:textAlignment="center"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/ibCheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="142dp"
+        android:layout_marginStart="116dp"
         android:layout_marginTop="64dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintTop_toBottomOf="@+id/etInput"
         app:srcCompat="@drawable/ic_baseline_done_24" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/ibReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="141dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/ibCheck"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ibCheck"
+        app:layout_constraintTop_toTopOf="@+id/ibCheck"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_baseline_refresh_24" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#C3C3C3"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/tvHead"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/tvHead"
+        app:layout_constraintTop_toBottomOf="@+id/tvHead" />
+
+    <TextView
+        android:id="@+id/tvHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+        android:textAlignment="center"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageButton
+        android:id="@+id/ibGiveUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ibReset"
+        app:layout_constraintStart_toEndOf="@+id/ibReset"
+        app:layout_constraintTop_toTopOf="@+id/ibReset"
+        app:srcCompat="@drawable/ic_baseline_outlined_flag_24" />
+
+    <TextView
+        android:id="@+id/tvWrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:textAlignment="textEnd"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Submit"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/ibCheck"
+        app:layout_constraintStart_toStartOf="@+id/ibCheck"
+        app:layout_constraintTop_toBottomOf="@+id/ibCheck" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="reset"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/ibReset"
+        app:layout_constraintStart_toStartOf="@+id/ibReset"
+        app:layout_constraintTop_toBottomOf="@+id/ibReset" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="surrender"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/ibGiveUp"
+        app:layout_constraintStart_toStartOf="@+id/ibGiveUp"
+        app:layout_constraintTop_toBottomOf="@+id/ibGiveUp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
