@@ -1,13 +1,7 @@
 package com.example.numberguessinggame
 
-import android.content.Context
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.transition.Slide
-import android.transition.TransitionManager
-import android.view.Gravity
-import android.view.LayoutInflater
 import android.widget.*
 import kotlin.random.Random.Default.nextInt
 
